@@ -5,14 +5,10 @@ grep -w exon Reference_Human_hg38_genes.gtf > tmp.bed\
 tr '"' '\\t' < tmp.bed > tmp2.bed\
 cut -f 1,4,5,14,18,20 tmp2.bed > tmp3.bed
 grep -w 'ATM\|BRCA2\|BRCA1\|PALB2\|CHEK2'  tmp3.bed > tmp4.bed
-#grep altenrative transcript for each gene 
+#grep alternative transcript for each gene 
 grep -w 'ENST00000380152.8\|ENST00000680887.1\|ENST00000544455.6\|ENST00000357654.9\|ENST00000471181.7\|ENST00000404276.6\|ENST00000650281.1\|ENST00000405598.5\|ENST00000382580.6\|ENST00000675843.1\|ENST00000452508.6\|ENST00000261584.9' tmp4.bed > exon_alt_trs.bed
 
  
-    
-
-\
-\
 \
 #CDS from gtf\
 \
