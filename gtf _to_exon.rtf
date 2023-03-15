@@ -2,7 +2,7 @@
 \
 grep -w exon Reference_Human_hg38_genes.gtf > tmp.bed\
 
-tr '"' '\\t' < tmp.bed > tmp2.bed\
+tr '"' '\t' < tmp.bed > tmp2.bed\
 cut -f 1,4,5,14,18,20 tmp2.bed > tmp3.bed
 grep -w 'ATM\|BRCA2\|BRCA1\|PALB2\|CHEK2'  tmp3.bed > tmp4.bed
 #grep alternative transcript for each gene 
